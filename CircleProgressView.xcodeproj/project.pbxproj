@@ -13,6 +13,8 @@
 		7A5F65562123D76D00099D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5F65552123D76D00099D4E /* Assets.xcassets */; };
 		7A5F65592123D76D00099D4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5F65572123D76D00099D4E /* LaunchScreen.storyboard */; };
 		7A5F655C2123D76D00099D4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F655B2123D76D00099D4E /* main.m */; };
+		7A5F65652123D7E300099D4E /* TCCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F65642123D7E300099D4E /* TCCircleProgressView.m */; };
+		7A5F65682124284400099D4E /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F65672124284400099D4E /* CircleProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		7A5F65582123D76D00099D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A5F655A2123D76D00099D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A5F655B2123D76D00099D4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7A5F65632123D7E300099D4E /* TCCircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCCircleProgressView.h; sourceTree = "<group>"; };
+		7A5F65642123D7E300099D4E /* TCCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCircleProgressView.m; sourceTree = "<group>"; };
+		7A5F65662124284300099D4E /* CircleProgressView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircleProgressView-Bridging-Header.h"; sourceTree = "<group>"; };
+		7A5F65672124284400099D4E /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		7A5F654B2123D76C00099D4E /* CircleProgressView */ = {
 			isa = PBXGroup;
 			children = (
+				7A5F65622123D7C500099D4E /* ProgressView */,
 				7A5F654C2123D76C00099D4E /* AppDelegate.h */,
 				7A5F654D2123D76C00099D4E /* AppDelegate.m */,
 				7A5F654F2123D76C00099D4E /* ViewController.h */,
@@ -69,6 +76,17 @@
 				7A5F655B2123D76D00099D4E /* main.m */,
 			);
 			path = CircleProgressView;
+			sourceTree = "<group>";
+		};
+		7A5F65622123D7C500099D4E /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				7A5F65632123D7E300099D4E /* TCCircleProgressView.h */,
+				7A5F65642123D7E300099D4E /* TCCircleProgressView.m */,
+				7A5F65672124284400099D4E /* CircleProgressView.swift */,
+				7A5F65662124284300099D4E /* CircleProgressView-Bridging-Header.h */,
+			);
+			path = ProgressView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +120,7 @@
 				TargetAttributes = {
 					7A5F65482123D76C00099D4E = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -143,6 +162,8 @@
 			files = (
 				7A5F65512123D76C00099D4E /* ViewController.m in Sources */,
 				7A5F655C2123D76D00099D4E /* main.m in Sources */,
+				7A5F65682124284400099D4E /* CircleProgressView.swift in Sources */,
+				7A5F65652123D7E300099D4E /* TCCircleProgressView.m in Sources */,
 				7A5F654E2123D76C00099D4E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +225,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -262,6 +284,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -283,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EHP882345;
 				INFOPLIST_FILE = CircleProgressView/Info.plist;
@@ -292,6 +316,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tc-tec.CircleProgressView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CircleProgressView/ProgressView/CircleProgressView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -300,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EHP882345;
 				INFOPLIST_FILE = CircleProgressView/Info.plist;
@@ -309,6 +337,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tc-tec.CircleProgressView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CircleProgressView/ProgressView/CircleProgressView-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
